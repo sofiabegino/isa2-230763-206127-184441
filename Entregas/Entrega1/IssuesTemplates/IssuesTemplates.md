@@ -1,12 +1,12 @@
 # Templates 
 
-Decidimos crear templates para los siguientes issues: user stories, tasks (con y sin relacioón a user story), reporte de bugs y reporte de calidad de código.
-Al crear un "New issue" en github, se deberá seleccionar uno de los templates.
-Además, tenemos labels asociados por default a cada uno. 
+Decidimos crear templates para los siguientes issues: user stories, tasks (con y sin relación a una user story), reporte de bugs y reporte de calidad de código.
+Al crear un "New issue" en github, se deberá seleccionar uno de los templates. Cada uno está asociado por default a una "label" que lo categoriza. También se pueden agregar más labels para mayor especificidad.
 
 ## User stories
 
 **Label asociada**: user story 
+
 Una user story en BDD es una descripción de una característica o funcionalidad que se va a agregar al software, desde la perspectiva del usuario. Se describe en términos de quién es el usuario, qué desea lograr y por qué. La user story es una forma de comunicar el valor que se espera que la nueva característica agregue al software.
 
 ##### Template:
@@ -22,6 +22,7 @@ Descripción
 Descripción detallada de la historia de usuario, incluyendo información sobre el comportamiento deseado y cualquier condición o contexto relevante.
 
 Criterios de Aceptación
+(repetir para todos los escenarios)
 *Escenario [número]: [descripción]*
 Dado [contexto]
 Cuando [evento]
@@ -40,6 +41,7 @@ Definimos templates para tasks con y sin relación a una user story.
 
 ### Tasks relacionadas a una user story:
 **Label asociada**: task
+
 Una tarea en BDD es una unidad de trabajo más específica. Las tareas se enfocan en las acciones técnicas que se deben realizar para agregar la funcionalidad descrita en la user story. Las tareas también se pueden describir utilizando la sintaxis de Dado-Cuando-Entonces, y su objetivo es especificar los detalles de implementación necesarios para realizar la funcionalidad descrita en la user story.
 
 ##### Template:
@@ -62,6 +64,7 @@ Estimado: en horas-persona
 
 ### Tasks sin user story:
 **Label asociada**: task de gestión 
+
 Tasks relacionadas a la gestión del proyecto: crear el tablero de tareas, crear la retrospectiva, documentar el proceso, etc.
 ##### Template:
 ```
@@ -74,6 +77,7 @@ Esfuerzo estimado: en horas-persona
 
 ## Reportes de Bugs
 **Label asociada**: bug
+
 Aquí reportamos los bugs identificados al hacer un análisis dinámico de UX/UI.
 #### Template:
 ```
@@ -96,6 +100,7 @@ Imagen/es: Imagen/es descriptivas
 
 ## Reportes de Calidad de código
 **Label asociada**: calidad de código
+
 Estos refieren a cualquier issue obtenido a partir del análisis de código. Revisamos estándares, existencia de loops anidados, cumplimiento de clean code y principios de diseño, ejecución de linters.
 
 ##### Template:

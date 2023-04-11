@@ -2,16 +2,19 @@
 
 En nuestro proceso vamos a tener dos tipo de tareas: tareas con user stories y tareas sin user stories. Las tareas con user stories son las que se van a realizar para desarrollar el proyecto. Las tareas sin user stories son las que se van a realizar para gestionar el proyecto como por ejemplo: crear el tablero de tareas, crear la retrospectiva, documentar el proceso, etc.
 
+En esta primera iteracion en el tablero no vamos a tener todas las columnas que vamos a detallar a continuacion porque muchas de ellas todavia no van a ser necesarias. En la segunda iteracion vamos a ir agregando las columnas a medida que se vayan necesitando.
+
 ## Tareas con user stories
 
 Para este tipo de tareas vamos a seguir el flujo por las siguientes columnas en nuestro tablero del proyecto:
 
 1. Backlog: En esta columna se encuentran las tareas que se deben realizar para el desarrollo del proyecto. Estas tareas todavia no han sido asignadas a nadie y no se han empezado a trabajar.
-2. Requirements Definition: La tarea llega a esta columna con tan solo el nombre y una breve descripcion. El asignado a la tarea debe hablar con el PO para terminar de definir toda la user story incluyendo los criterios de aceptacion y la estimacion de la tarea.
-3. Dev: En esta columna se encuentran las tareas que ya han sido asignadas y se estan trabajando. En este paso de debe codificar la solucion a la user story cumpliendo con los criterios de aceptacion. Tambien se deben de codificar los test unitarios para la solucion.
-4. Testing: En esta columna se encuentran las tareas que ya han sido terminadas y se estan probando. En este paso se deben de probar los test unitarios y corregir los errores que se encuentren. Si es necesario tambien se podrian hacer test de integracion.
-5. Deployment: En esta columna se encuentran las tareas que ya han sido probadas y se estan desplegando. En este paso se debe de desplegar la solucion a produccion. Este proceso se realizara de forma automatica con GitHub Actions.
-6. Done: En esta columna se encuentran las tareas que ya han sido desplegadas y se encuentran en produccion.
+2. Requirements Definition: La tarea llega a esta columna con tan solo el nombre y una breve descripcion. El asignado a la tarea debe hablar con el PO para terminar de definir toda la user story incluyendo los criterios de aceptacion y la estimacion de la tarea. Esta tarea la realizara el PO.
+3. Diseño: En este paso se debe de realizar el diseño de la solucion a la user story cumpliendo con los criterios de aceptacion. Utilizando UML se debe de realizar el diagrama de clases. El lead developer tendria que realizar esta tarea pero en nuestro caso lo hara un desarrollador.
+4. Dev: En esta columna se encuentran las tareas que ya han sido asignadas y se estan trabajando. En este paso de debe codificar la solucion a la user story cumpliendo con los criterios de aceptacion. Tambien se deben de codificar los test unitarios para la solucion. Esta tarea la realizara un desarrollador.
+5. Testing: En esta columna se encuentran las tareas que ya han sido terminadas y se estan probando. En este paso se deben de probar los test unitarios y corregir los errores que se encuentren. Si es necesario tambien se podrian hacer test de integracion. Esta tarea la realizara el equipo de QA(testers).
+6. Deployment: En esta columna se encuentran las tareas que ya han sido probadas y se estan desplegando. En este paso se debe de desplegar la solucion a produccion. Este proceso se realizara de forma automatica con GitHub Actions. Esta tarea la realizara el desarrollador.
+7. Done: En esta columna se encuentran las tareas que ya han sido desplegadas y se encuentran en produccion.
 
 ## Tareas sin user stories
 

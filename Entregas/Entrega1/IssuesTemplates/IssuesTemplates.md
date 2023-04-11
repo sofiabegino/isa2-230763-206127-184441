@@ -31,7 +31,7 @@ Entonces [resultado]
 Esfuerzo
 Estimado: en horas-persona
 ```
-Definimos el esfuerzo refiere al trabajo intelectual que tiene que hacer alguien para construir algo.
+El esfuerzo refiere al trabajo intelectual que tiene que hacer alguien para construir algo.
 Ej: si un desarrollador trabaja en una tarea durante 4 horas el lunes y 2 horas el martes, el esfuerzo en horas persona total para esa tarea sería de 6 horas persona.
 
 

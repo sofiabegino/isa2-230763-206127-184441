@@ -29,9 +29,9 @@ Utilizaremos GitFlow como estrategia de branching, tendremos:
 
 ### Para las ramas seguiremos el siguiente estandar:
 
-feature/numeroTicket
-bug/numerTicket
-document/numeroTicket
+feature/nro-ticket/nombre-ticket
+bug/nro-ticket/nombre-ticket
+document/nro-ticket/nombre-ticket
 
 ### Para los commits utilizaremos el siguiente estandar de "Conventional Commits":
 

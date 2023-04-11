@@ -4,7 +4,7 @@ Decidimos crear templates para los siguientes issues: user stories, tasks (con y
 Al crear un "New issue" en github, se deberá seleccionar uno de los templates.
 Además, tenemos labels asociados por default a cada uno. 
 
-### User stories
+## User stories
 
 **Label asociada**: user story 
 Una user story en BDD es una descripción de una característica o funcionalidad que se va a agregar al software, desde la perspectiva del usuario. Se describe en términos de quién es el usuario, qué desea lograr y por qué. La user story es una forma de comunicar el valor que se espera que la nueva característica agregue al software.
@@ -38,7 +38,7 @@ Ej: si un desarrollador trabaja en una tarea durante 4 horas el lunes y 2 horas 
 
 Definimos templates para tasks con y sin relación a una user story.
 
-#### Tasks relacionadas a una user story:
+### Tasks relacionadas a una user story:
 **Label asociada**: task
 Una tarea en BDD es una unidad de trabajo más específica. Las tareas se enfocan en las acciones técnicas que se deben realizar para agregar la funcionalidad descrita en la user story. Las tareas también se pueden describir utilizando la sintaxis de Dado-Cuando-Entonces, y su objetivo es especificar los detalles de implementación necesarios para realizar la funcionalidad descrita en la user story.
 
@@ -60,7 +60,7 @@ Esfuerzo
 Estimado: en horas-persona 
 ```
 
-#### Tasks sin user story:
+### Tasks sin user story:
 **Label asociada**: task de gestión 
 Tasks relacionadas a la gestión del proyecto: crear el tablero de tareas, crear la retrospectiva, documentar el proceso, etc.
 ##### Template:

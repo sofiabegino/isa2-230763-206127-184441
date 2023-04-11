@@ -94,8 +94,8 @@ Imagen/es: Imagen/es descriptivas
 ```
 **Definimos las clasificaciones de la siguiente manera:**
 
-**Funcionalidad**: errores en las funciones principales del software, por ejemplo en los CRUDs
-**Usabilidad**: enfocado en la experiencia del usuario al utilizar el software. Incluye la interfaz gráfica, la navegación, el flujo de trabajo, la accesibilidad y la facilidad de comprensión de las características y funciones del software
+**Funcionalidad**: errores en las funciones principales del software, por ejemplo en los CRUDs                      
+**Usabilidad**: enfocado en la experiencia del usuario al utilizar el software. Incluye la interfaz gráfica, la navegación, el flujo de trabajo, la accesibilidad y la facilidad de comprensión de las características y funciones del software                     
 **Eficenca**: enfocado en la eficiencia del sistema a ojos del usuario. Por ejemplo: se hace una solicitud al servidor para validar la entrada del usuario en lugar de validarla en el lado del cliente. Si los mensajes de error solo se generan después de hacer una solicitud al servidor, los usuarios pueden tener que esperar más tiempo para recibir comentarios sobre sus entradas incorrectas
 
 ## Reportes de Calidad de código

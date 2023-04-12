@@ -1,7 +1,9 @@
 
 ## Descripción de la actividad 
 
-Para realizar el análisis de la deuda técnica nuestro equipo dividio el trabajo en varias instancias, primero se realizaron todas las configuraciones necesarias para poder ejecutar la aplicación proporcionada "ArenaGestor", luego se realizo un analisis de bugs explorando la UI con los diferentes roles y un analisis del código para detectar problemas en realcion a Clean Code:
+Para realizar el análisis de la deuda técnica nuestro equipo dividió el trabajo en varias instancias, primero se realizaron todas las configuraciones necesarias para poder ejecutar la aplicación proporcionada "ArenaGestor", luego se realizo un análisis de bugs explorando la UI con los diferentes roles y un análisis del código para detectar problemas en relación a Clean Code. Luego estos errores fueron transformados en issues en nuestro tablero del proyecto.
+
+Debido a que se encontró un gran volumen de bugs que escapan el alcance del proyecto, se consideró por el equipo que los bugs/issues más interesantes eran los listados a continuación:
 
 ## Análisis de Bugs en UI
 
@@ -54,4 +56,4 @@ Para realizar el análisis de la deuda técnica nuestro equipo dividio el trabaj
 * Existen multiples comentarios innecesarios
 * Existen archivos vacíos
 
-Se decidió por el equipo que los bugs más interesantes eran los listados antes, ya que se encontro un gran volumen de bugs que escapaban el alcance del proyecto.
+El analisis más profundo de las issues se encuentra en el tablero del proyecto, allí se siguio el formato de las issues establecido en los templates de la carpeta "IssiesTemplates". Donde se puede ver la descripción, la solucion (lo que se espera) y la deuda (lo que ocurre actualmente) en cada caso.

@@ -23,4 +23,11 @@ Cuando [evento]
 Entonces [resultado]
 
 ### Esfuerzo
-Estimado: [Estimación en horas-persona]
+| Instancia                  | Esfuerzo estimado | Esfuerzo real |
+| ---------------            | ---------------   | --------------- |
+| Test Cases Implementation  | [horas-persona]   | [horas-persona] |
+| Application Implementation | [horas-persona]   | [horas-persona] |
+| Testing                    | [horas-persona]   | [horas-persona] |
+| Refactoring                | [horas-persona]   | [horas-persona] |
+|                            |                   |                 |
+| **Esfuerzo total**            |  [horas-persona]  | [horas-persona] |

@@ -1,0 +1,59 @@
+name: build and test
+
+on:
+  push:
+  pull_request:
+    branches: [dev, main]
+    paths:
+    - '**.cs'
+    - '**.csproj'
+
+env:
+  DOTNET_VERSION: 6.0.x' # The .NET SDK version to use
+
+jobs:
+  build:
+
+    name: build-${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node-version: [16.x]
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: ${{ env.DOTNET_VERSION }}
+
+    - name: Install .NET dependencies
+      working-directory: ./Obligatorio/codigo/ArenaGestor
+      run: dotnet restore
+      
+    - name: Build .NET
+      working-directory: ./Obligatorio/codigo/ArenaGestor
+      run: dotnet build --configuration Release --no-restore
+        
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+        
+    - name: Setup Cache
+      uses: actions/cache@v1
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
+          
+    - name: Build Angular
+      run: |
+        npm install
+        npm run build
+      working-directory: ./Obligatorio/codigo/ArenaGestorFront
+

@@ -758,5 +758,14 @@ namespace ArenaGestor.BusinessTest
             managementService.ChangePassword(It.IsAny<string>(), null);
             managementMock.VerifyAll();
         }
+
+        [ExpectedException(typeof(ArgumentException))]
+        [TestMethod]
+        public void ChangePasswordLoggedInUserNewPasswordTooShort()
+        {
+            securityServiceMock.Setup(x => x.GetUserOfToken(It.IsAny<string>())).Returns(userOK);
+            managementService.ChangePassword(It.IsAny<string>(), new UserChangePassword(userOK.Email, "testuser123", "New"));
+            managementMock.VerifyAll();
+        }
     }
 }

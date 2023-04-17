@@ -44,7 +44,7 @@ namespace ArenaGestor.Domain
             }
             if (!CommonValidations.ValidPassword(this.NewPassword))
             {
-                throw new ArgumentException("The password must have at least one digit and one letter");
+                throw new ArgumentException("The password must have at least one digit, one letter and one special character");
             }
         }
     }

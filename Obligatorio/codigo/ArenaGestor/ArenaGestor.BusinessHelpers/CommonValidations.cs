@@ -36,8 +36,8 @@ namespace ArenaGestor.BusinessHelpers
                 return false;
             }
             
-            Regex regex = new Regex(@"^(?=.*[a-zA-Z])(?=.*\d)(?=.*[^\w\s]).+$");
-            
+            Regex regex = new Regex(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{8,30}$");
+
             return regex.IsMatch(password);
         }
     }

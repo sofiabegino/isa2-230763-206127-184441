@@ -109,10 +109,10 @@ namespace ArenaGestor.APITest
             {
                 Email = "test@user.com",
                 OldPassword = "testuser123",
-                NewPassword = "newuser123"
+                NewPassword = "NewPassword123&&"
             };
 
-            userChangePasswordOK = new UserChangePassword("test@user.com", "testuser123", "newuser123");
+            userChangePasswordOK = new UserChangePassword("test@user.com", "testuser123", "NewPassword123&&");
         }
 
         [TestMethod]

@@ -42,6 +42,10 @@ namespace ArenaGestor.Domain
             {
                 throw new ArgumentException("The password must be at least 8 characters long");
             }
+            if (!CommonValidations.ValidPassword(this.NewPassword))
+            {
+                throw new ArgumentException("The password must have at least one digit and one letter");
+            }
         }
     }
 }

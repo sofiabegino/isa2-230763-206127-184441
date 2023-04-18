@@ -1,7 +1,11 @@
-name: build and test
+name: Build and Test
 
 on:
   push:
+    branches: [dev, main]
+    paths:
+    - '**.cs'
+    - '**.csproj'
   pull_request:
     branches: [dev, main]
     paths:
@@ -56,4 +60,55 @@ jobs:
         npm install
         npm run build
       working-directory: ./Obligatorio/codigo/ArenaGestorFront
+
+test:
+    name: test-${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        dotnet-version: [ '5.0.x' ]
+
+ 
+
+    steps: 
+    - name: Move card to Testing
+      uses: alex-page/github-project-automation-plus@5bcba1c1c091a222584d10913e5c060d32c44044
+      with:
+        project: Isa2 Obligatorio
+        column: Testing
+
+    - uses: actions/checkout@v2
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: ${{ matrix.dotnet-version }}
+
+ 
+
+    - name: Install dependencies
+      working-directory: ./Obligatorio/codigo/ArenaGestor/
+      run: dotnet restore
+
+    - name: Build
+      working-directory: ./Obligatorio/codigo/ArenaGestor/
+      run: dotnet build --configuration Debug --no-restore
+
+ 
+
+    - name: Test API
+      working-directory: ./Obligatorio/codigo/ArenaGestor/Test/ArenaGestor.APITest/
+      run: dotnet test --no-build --verbosity normal
+
+ 
+
+    - name: Test Business Logic
+      working-directory: ./Obligatorio/codigo/ArenaGestor/Test/ArenaGestor.BusinessTest/
+      run: dotnet test --no-build --verbosity normal
+
+ 
+
+    - name: Test Data Access
+      working-directory: ./Obligatorio/codigo/ArenaGestor/Test/ArenaGestor.DataAccessTest/
+      run: dotnet test --no-build --verbosity normal
 

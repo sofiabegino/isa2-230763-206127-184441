@@ -1,6 +1,6 @@
 # Configuracion Pipeline
 
-Creamos un pipeline de build y test, que contiene un conjunto de pasos automatizados que se ejecutan de manera secuencial al hacer un push o un pull request.
+Creamos un pipeline de build y test, que contiene un conjunto de pasos automatizados que se ejecutan de manera secuencial al hacer un pull request.
 
 El pipeline de "build" realiza las siguientes tareas:
 - Clonar el repositorio
@@ -18,6 +18,6 @@ El pipeline de "test" realiza las siguientes tareas:
 -Compilar el proyecto .NET
 -Ejecutar pruebas de API, pruebas de lógica de negocios y pruebas de acceso a datos
 
-Una vez que el pipeline de build se completa con éxito, el pipeline de test puede ejecutarse para probar la funcionalidad del software. Si se detectan errores en alguna de las pruebas, el pipeline se interrumpe y se nos notifica.
+Si se detectan errores en alguna de las pruebas, el pipeline se interrumpe y se nos notifica.
 
 El pipeline de build y test se puede integrar con un tablero kanban para visualizar el estado actual del proceso y para que el equipo pueda realizar un seguimiento del progreso y detectar cuellos de botella en el flujo de trabajo. Por ejemplo, las fases del pipeline podrían estar asociadas a las diferentes columnas del tablero: a medida que se van pasando por las distintas fases del pipeline, las tareas se mueven a través de las diferentes etapas del tablero kanban.

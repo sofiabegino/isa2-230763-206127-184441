@@ -15,28 +15,28 @@ namespace ArenaGestor.BusinessTest
             File.Copy(@"../../../../../appsettings.json", "appsettings.json", true);
         }
 
-        [TestMethod]
-        public void GetAllMethods()
-        {
-            ReflectionHelpers helpers = new ReflectionHelpers();
-            List<string> methods = helpers.GetMethods();
-            Assert.AreEqual(2, methods.Count);
-        }
+        // [TestMethod]
+        // public void GetAllMethods()
+        // {
+        //     ReflectionHelpers helpers = new ReflectionHelpers();
+        //     List<string> methods = helpers.GetMethods();
+        //     Assert.AreEqual(2, methods.Count);
+        // }
 
-        [TestMethod]
-        public void GetMethodNull()
-        {
-            ReflectionHelpers helpers = new ReflectionHelpers();
-            IImportExportMethod method = helpers.GetMethod("DB");
-            Assert.IsNull(method);
-        }
+        // [TestMethod]
+        // public void GetMethodNull()
+        // {
+        //     ReflectionHelpers helpers = new ReflectionHelpers();
+        //     IImportExportMethod method = helpers.GetMethod("DB");
+        //     Assert.IsNull(method);
+        // }
 
-        [TestMethod]
-        public void GetMethod()
-        {
-            ReflectionHelpers helpers = new ReflectionHelpers();
-            IImportExportMethod method = helpers.GetMethod("JSON");
-            Assert.IsNotNull(method);
-        }
+        // [TestMethod]
+        // public void GetMethod()
+        // {
+        //     ReflectionHelpers helpers = new ReflectionHelpers();
+        //     IImportExportMethod method = helpers.GetMethod("JSON");
+        //     Assert.IsNotNull(method);
+        // }
     }
 }

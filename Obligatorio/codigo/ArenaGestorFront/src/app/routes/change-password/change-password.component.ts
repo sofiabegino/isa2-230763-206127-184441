@@ -28,6 +28,7 @@ export class ChangePasswordComponent implements OnInit {
     this.userService.ChangePasswordLoggedUser(this.model).subscribe(res => {
       this.toastr.success("Contraseña cambiada con éxito")
       this.model = new UserChangePasswordDto();
+      this.newPasswordConfirm = "";
     }, error => {
       this.toastr.error(error.error);
     })

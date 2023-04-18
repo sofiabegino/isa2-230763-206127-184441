@@ -40,3 +40,10 @@ Entonces el sistema debe permitir el cambio de contraseña y mostrar un mensaje 
 Dado que el usuario desea cambiar su contraseña
 Cuando el usuario ingresa una nueva contraseña que no cumple con los requisitos de seguridad
 Entonces el sistema debe mostrar un mensaje de error y solicitar al usuario que ingrese una nueva contraseña que cumpla con los requisitos de seguridad
+
+# User Story
+
+Para trabajar con los bugs, estos fueron refinados en historias de usuario: 
+
+* Usuario con rol "Artista" no puede desloguearse#69
+* Cambio de contraseña no valida la seguridad#68

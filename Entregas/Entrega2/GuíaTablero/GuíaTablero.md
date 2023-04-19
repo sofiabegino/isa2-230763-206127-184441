@@ -1,22 +1,22 @@
 # Modificaciónes al Proceso de ingeniería
 
 Realizamos algunas adaptaciones respecto al proceso de ingeniería presentado en la primera entrega. Debido a que en esta entrega se deben trabajar dos bugs.
-Teniendo en cuenta que los roles que se manejan en este proyecto son: tester (los mismos también participan como programadores), integrante que actúa como PO e integrante que actúa como SM, el nuevo proceso de ingeniería es:
+Teniendo en cuenta que los roles que se manejan en este proyecto son: tester, developer, integrante que actúa como PO e integrante que actúa como SM, el nuevo proceso de ingeniería es:
 
 ![Proceso Ingeniería](procesoIngenieria.png)
 
 1) Requirements Definition
 * Cómo: Utilizando template de User story
 * Cuándo: Al iniciar el proceso de reparación de bugs.
-* Quién: Testers/Programadores/PO
+* Quién: PO
 2) Test Cases Implementation
 * Cómo: Se implementan tests.
 * Cuándo: Luego de generar las User story correspondientes.
-* Quién: Testers/Programadores
+* Quién: Developers
 3) Application Implementation
 * Cómo: Se trabaja en el código de la aplicación.
 * Cuándo: Luego de la implementacion de los casos de prueba correspondientes.
-* Quién: Testers/Programadores
+* Quién: Developers
 4) Testing
 * Cómo: Ejecucion de casos de prueba implementadoa en el paso 2.
 * Cuándo: Luego de finalizada la implementación de los ajustes.
@@ -24,7 +24,7 @@ Teniendo en cuenta que los roles que se manejan en este proyecto son: tester (lo
 5) Refactor
 * Cómo: Mejorar el código.
 * Cuándo: Luego de realizado el testing, si existe algun ajuste o mejora a realizar.
-* Quién: Testers/Programadores
+* Quién: Developers
 
 # Modificaciónes del tablero
 

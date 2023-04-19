@@ -17,12 +17,12 @@ Luego notamos que existía un error al identificar el bug #43, en este considera
 
 Se selecciono este bug por ser un error que invalida seguir utilizando la UI con otros usuarios, ya que cuando el usuario con rol artista intenta desloguearse, ocurre un error de permisos, en el cual se indica que el usuario no tiene permiso para salir de la sesión, lo cual debe ser un permiso otorgado a cualquier rol, entonces el usuario con rol artista es incapaz de cerrar su sesión y no es posible loguearce con otros usuarios de diferentes roles. Por lo que para arreglar este ajuste se formularon los siguientes criterios de aceptación:
 
-* Escenario 1: Deslogueo exitoso
+* & Escenario 1: Deslogueo exitoso
 Dado que el usuario con rol "Artista" desea desloguearse
 Cuando el usuario hace clic en la opción "Desloguearse"
 Entonces el sistema debe cerrar la sesión del usuario y redirigirlo a la página de inicio de sesión
 
-* Escenario 2: Protección de la información del usuario
+Escenario 2: Protección de la información del usuario
 Dado que el usuario con rol "Artista" se ha deslogueado de su cuenta
 Cuando otro usuario intenta acceder a la información del usuario deslogueado
 Entonces el sistema debe asegurar que la información del usuario se borre de manera segura y que ningún otro usuario pueda acceder a ella
@@ -40,10 +40,3 @@ Entonces el sistema debe permitir el cambio de contraseña y mostrar un mensaje 
 Dado que el usuario desea cambiar su contraseña
 Cuando el usuario ingresa una nueva contraseña que no cumple con los requisitos de seguridad
 Entonces el sistema debe mostrar un mensaje de error y solicitar al usuario que ingrese una nueva contraseña que cumpla con los requisitos de seguridad
-
-# User Story
-
-Para trabajar con los bugs, estos fueron refinados en historias de usuario: 
-
-* Usuario con rol "Artista" no puede desloguearse#69
-* Cambio de contraseña no valida la seguridad#68

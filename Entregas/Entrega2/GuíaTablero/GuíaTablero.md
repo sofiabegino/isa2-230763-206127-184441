@@ -35,7 +35,9 @@ Para esta instancia se agregaron nuevas columnas para con la estratégia BDD, es
 * Application Implementation - En esta instancia se desarrolla el codigo para solucionar el bug
 * Refactor - Luego de ejecutar los tests y probar la solucion de los bugs se decidirá si es necesario realizar algun ajuste, en dicho caso la issue se moverá hasta esta columna.
 
-Por otro lado, además agregamos una nueva columna "TO DO" que se ocupara para ubicar las issues que se van a estar trabajando del BACKLOG, ya que para esta entrega solo se van a trabajar 2 bugs y nuestro BACKLOG cuenta con muchos más.
+Por otro lado, agregamos una nueva columna "TO DO" que se ocupara para ubicar las issues que se van a estar trabajando del "BACKLOG", ya que para esta entrega solo se van a trabajar 2 bugs y nuestro BACKLOG cuenta con muchos más.
+
+Aclaramos además que la columna "Testing" de la entrega 1 se utilizaba para la instancia de identificar bugs/problemas de codigo, pero en esta oportunidad se utiliza como la columna "Testing" de kanban.
 
 Finalmente, la columna de "IN PROGRESS" se utilizará para ubicar las issues de documentación que se están trabajando y que luego pasarán a estar en "DONE", ya que no pasan por todas las instancias del proceso como si lo podrían hacer los bugs.
 

@@ -525,7 +525,7 @@ namespace ArenaGestor.BusinessTest
         public void ChangePasswordInvalidUserTest()
         {
             managementMock.Setup(x => x.GetUsers(It.IsAny<Func<User, bool>>())).Returns(new List<User>());
-            managementService.ChangePassword(new UserChangePassword(userOK.Email, "TestPass", "newPass"));
+            managementService.ChangePassword(new UserChangePassword(userOK.Email, "TestPass", "NewPassword123&&"));
             managementMock.VerifyAll();
         }
 
@@ -534,7 +534,7 @@ namespace ArenaGestor.BusinessTest
         public void ChangeEmptyEmailTest()
         {
             managementMock.Setup(x => x.GetUsers(It.IsAny<Func<User, bool>>())).Returns(usersOK);
-            managementService.ChangePassword(new UserChangePassword("", "TestPass", "newPass"));
+            managementService.ChangePassword(new UserChangePassword("", "TestPass", "NewPassword123&&"));
             managementMock.VerifyAll();
         }
 
@@ -543,7 +543,7 @@ namespace ArenaGestor.BusinessTest
         public void ChangeNullEmailTest()
         {
             managementMock.Setup(x => x.GetUsers(It.IsAny<Func<User, bool>>())).Returns(usersOK);
-            managementService.ChangePassword(new UserChangePassword(null, "TestPass", "newPass"));
+            managementService.ChangePassword(new UserChangePassword(null, "TestPass", "NewPassword123&&"));
             managementMock.VerifyAll();
         }
 
@@ -570,7 +570,7 @@ namespace ArenaGestor.BusinessTest
         public void ChangeEmptyOldPasswordTest()
         {
             managementMock.Setup(x => x.GetUsers(It.IsAny<Func<User, bool>>())).Returns(usersOK);
-            managementService.ChangePassword(new UserChangePassword(userOK.Email, "", "newPass"));
+            managementService.ChangePassword(new UserChangePassword(userOK.Email, "", "NewPassword123&&"));
             managementMock.VerifyAll();
         }
 
@@ -579,7 +579,7 @@ namespace ArenaGestor.BusinessTest
         public void ChangeNullOldPasswordTest()
         {
             managementMock.Setup(x => x.GetUsers(It.IsAny<Func<User, bool>>())).Returns(usersOK);
-            managementService.ChangePassword(new UserChangePassword(userOK.Email, null, "newPass"));
+            managementService.ChangePassword(new UserChangePassword(userOK.Email, null, "NewPassword123&&"));
             managementMock.VerifyAll();
         }
 
@@ -588,7 +588,7 @@ namespace ArenaGestor.BusinessTest
         public void ChangeOldDifferentPasswordTest()
         {
             managementMock.Setup(x => x.GetUsers(It.IsAny<Func<User, bool>>())).Returns(usersOK);
-            managementService.ChangePassword(new UserChangePassword(userOK.Email, "testuserbad", "newPass"));
+            managementService.ChangePassword(new UserChangePassword(userOK.Email, "testuserbad", "NewPassword123&&"));
             managementMock.VerifyAll();
         }
 
@@ -598,7 +598,7 @@ namespace ArenaGestor.BusinessTest
             managementMock.Setup(x => x.GetUsers(It.IsAny<Func<User, bool>>())).Returns(usersOK);
             managementMock.Setup(x => x.UpdateUserHeader(userOK));
             managementMock.Setup(x => x.Save());
-            managementService.ChangePassword(new UserChangePassword(userOK.Email, "testuser123", "NewPass"));
+            managementService.ChangePassword(new UserChangePassword(userOK.Email, "testuser123", "NewPassword123&&"));
             managementMock.VerifyAll();
         }
 
@@ -674,7 +674,7 @@ namespace ArenaGestor.BusinessTest
         public void ChangePasswordLoggedInUserInvalidUserTest()
         {
             securityServiceMock.Setup(x => x.GetUserOfToken(It.IsAny<string>())).Returns(userNull);
-            managementService.ChangePassword(It.IsAny<string>(), new UserChangePassword(userOK.Email, "TestPass", "newPass"));
+            managementService.ChangePassword(It.IsAny<string>(), new UserChangePassword(userOK.Email, "TestPass", "NewPassword123&&"));
             managementMock.VerifyAll();
         }
 
@@ -683,7 +683,7 @@ namespace ArenaGestor.BusinessTest
         public void ChangeLoggedInUserEmptyEmailTest()
         {
             securityServiceMock.Setup(x => x.GetUserOfToken(It.IsAny<string>())).Returns(userOK);
-            managementService.ChangePassword(It.IsAny<string>(), new UserChangePassword("", "TestPass", "newPass"));
+            managementService.ChangePassword(It.IsAny<string>(), new UserChangePassword("", "TestPass", "NewPassword123&&"));
             managementMock.VerifyAll();
         }
 
@@ -692,7 +692,7 @@ namespace ArenaGestor.BusinessTest
         public void ChangeLoggedInUserNullEmailTest()
         {
             securityServiceMock.Setup(x => x.GetUserOfToken(It.IsAny<string>())).Returns(userOK);
-            managementService.ChangePassword(It.IsAny<string>(), new UserChangePassword(null, "TestPass", "newPass"));
+            managementService.ChangePassword(It.IsAny<string>(), new UserChangePassword(null, "TestPass", "NewPassword123&&"));
             managementMock.VerifyAll();
         }
 
@@ -719,7 +719,7 @@ namespace ArenaGestor.BusinessTest
         public void ChangeLoggedInUserEmptyOldPasswordTest()
         {
             securityServiceMock.Setup(x => x.GetUserOfToken(It.IsAny<string>())).Returns(userOK);
-            managementService.ChangePassword(It.IsAny<string>(), new UserChangePassword(userOK.Email, "", "newPass"));
+            managementService.ChangePassword(It.IsAny<string>(), new UserChangePassword(userOK.Email, "", "NewPassword123&&"));
             managementMock.VerifyAll();
         }
 
@@ -728,7 +728,7 @@ namespace ArenaGestor.BusinessTest
         public void ChangeLoggedInUserNullOldPasswordTest()
         {
             securityServiceMock.Setup(x => x.GetUserOfToken(It.IsAny<string>())).Returns(userOK);
-            managementService.ChangePassword(It.IsAny<string>(), new UserChangePassword(userOK.Email, null, "newPass"));
+            managementService.ChangePassword(It.IsAny<string>(), new UserChangePassword(userOK.Email, null, "NewPassword123&&"));
             managementMock.VerifyAll();
         }
 
@@ -737,7 +737,7 @@ namespace ArenaGestor.BusinessTest
         public void ChangeLoggedInUserOldDifferentPasswordTest()
         {
             securityServiceMock.Setup(x => x.GetUserOfToken(It.IsAny<string>())).Returns(userOK);
-            managementService.ChangePassword(It.IsAny<string>(), new UserChangePassword(userOK.Email, "testuserbad", "newPass"));
+            managementService.ChangePassword(It.IsAny<string>(), new UserChangePassword(userOK.Email, "testuserbad", "NewPassword123&&"));
             managementMock.VerifyAll();
         }
 
@@ -747,7 +747,7 @@ namespace ArenaGestor.BusinessTest
             securityServiceMock.Setup(x => x.GetUserOfToken(It.IsAny<string>())).Returns(userOK);
             managementMock.Setup(x => x.UpdateUserHeader(userOK));
             managementMock.Setup(x => x.Save());
-            managementService.ChangePassword(It.IsAny<string>(), new UserChangePassword(userOK.Email, "testuser123", "NewPass"));
+            managementService.ChangePassword(It.IsAny<string>(), new UserChangePassword(userOK.Email, "testuser123", "NewPassword123&&"));
             managementMock.VerifyAll();
         }
 
@@ -756,6 +756,42 @@ namespace ArenaGestor.BusinessTest
         public void ChangePasswordLoggedInUserNull()
         {
             managementService.ChangePassword(It.IsAny<string>(), null);
+            managementMock.VerifyAll();
+        }
+
+        [ExpectedException(typeof(ArgumentException))]
+        [TestMethod]
+        public void ChangePasswordLoggedInUserNewPasswordTooShort()
+        {
+            securityServiceMock.Setup(x => x.GetUserOfToken(It.IsAny<string>())).Returns(userOK);
+            managementService.ChangePassword(It.IsAny<string>(), new UserChangePassword(userOK.Email, "testuser123", "New"));
+            managementMock.VerifyAll();
+        }
+
+        [ExpectedException(typeof(ArgumentException))]
+        [TestMethod]
+        public void ChangePasswordLoggedInUserNewPasswordNoNumbers()
+        {
+            securityServiceMock.Setup(x => x.GetUserOfToken(It.IsAny<string>())).Returns(userOK);
+            managementService.ChangePassword(It.IsAny<string>(), new UserChangePassword(userOK.Email, "testuser123", "NewPasstest"));
+            managementMock.VerifyAll();
+        }
+
+        [ExpectedException(typeof(ArgumentException))]
+        [TestMethod]
+        public void ChangePasswordLoggedInUserNewPasswordNoLetters()
+        {
+            securityServiceMock.Setup(x => x.GetUserOfToken(It.IsAny<string>())).Returns(userOK);
+            managementService.ChangePassword(It.IsAny<string>(), new UserChangePassword(userOK.Email, "testuser123", "1234567890"));
+            managementMock.VerifyAll();
+        }
+
+        [ExpectedException(typeof(ArgumentException))]
+        [TestMethod]
+        public void ChangePasswordLoggedInUserNewPasswordNoSpecialChar()
+        {
+            securityServiceMock.Setup(x => x.GetUserOfToken(It.IsAny<string>())).Returns(userOK);
+            managementService.ChangePassword(It.IsAny<string>(), new UserChangePassword(userOK.Email, "testuser123", "NewPassword123"));
             managementMock.VerifyAll();
         }
     }

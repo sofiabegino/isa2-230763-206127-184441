@@ -38,6 +38,14 @@ namespace ArenaGestor.Domain
             {
                 throw new ArgumentException("The password is incorrect");
             }
+            if (this.NewPassword.Length < 8)
+            {
+                throw new ArgumentException("The password must be at least 8 characters long");
+            }
+            if (!CommonValidations.ValidPassword(this.NewPassword))
+            {
+                throw new ArgumentException("The password must have at least one digit, one letter,one special character and one upper case letter");
+            }
         }
     }
 }

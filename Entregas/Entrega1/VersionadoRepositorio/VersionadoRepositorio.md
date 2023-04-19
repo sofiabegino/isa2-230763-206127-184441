@@ -32,6 +32,7 @@ Utilizaremos GitFlow como estrategia de branching, tendremos:
 feature/nro-ticket/nombre-ticket
 bug/nro-ticket/nombre-ticket
 document/nro-ticket/nombre-ticket
+fix/nro-ticket/nombre-ticket
 
 ### Para los commits utilizaremos el siguiente estandar de "Conventional Commits":
 

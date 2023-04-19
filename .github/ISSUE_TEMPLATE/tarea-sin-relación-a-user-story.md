@@ -12,3 +12,4 @@ assignees: ''
 
 ### Esfuerzo
 Estimado: [Estimación en horas-persona]
+Real: [Estimación en horas-persona]

@@ -1,0 +1,93 @@
+name: Build and Test
+
+on:
+  push:
+  pull_request:
+    branches: [dev, main]
+    paths:
+    - '**.cs'
+    - '**.csproj'
+
+env:
+  DOTNET_VERSION: '6.0.x' 
+
+jobs:
+  build:
+
+    name: build-${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node-version: [16.x]
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+    
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: ${{ env.DOTNET_VERSION }}
+
+    - name: Install .NET dependencies
+      working-directory: ./Obligatorio/codigo/ArenaGestor
+      run: dotnet restore
+      
+    - name: Build .NET
+      working-directory: ./Obligatorio/codigo/ArenaGestor
+      run: dotnet build --configuration Release --no-restore
+        
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+        
+    - name: Setup Cache
+      uses: actions/cache@v3
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
+          
+    - name: Build Angular
+      run: |
+        npm install
+        npm run build
+      working-directory: ./Obligatorio/codigo/ArenaGestorFront
+
+  test:
+    name: test-${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        dotnet-version: [ '5.0.x' ]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: ${{ matrix.dotnet-version }}
+
+    - name: Install dependencies
+      working-directory: ./Obligatorio/codigo/ArenaGestor/
+      run: dotnet restore
+
+    - name: Build
+      working-directory: ./Obligatorio/codigo/ArenaGestor/
+      run: dotnet build --configuration Debug --no-restore
+
+    - name: Test API
+      working-directory: ./Obligatorio/codigo/ArenaGestor/Test/ArenaGestor.APITest/
+      run: dotnet test --no-build --verbosity normal
+
+    - name: Test Business Logic
+      working-directory: ./Obligatorio/codigo/ArenaGestor/Test/ArenaGestor.BusinessTest/
+      run: dotnet test --no-build --verbosity normal
+
+    - name: Test Data Access
+      working-directory: ./Obligatorio/codigo/ArenaGestor/Test/ArenaGestor.DataAccessTest/
+      run: dotnet test --no-build --verbosity normal

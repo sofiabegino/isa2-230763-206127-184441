@@ -2,7 +2,7 @@
 {
     public class SnackResultDto
     {
-        public int SnackId { get; set; }
+        public int Id { get; set; }
         
         public string Description { get; set; }
         

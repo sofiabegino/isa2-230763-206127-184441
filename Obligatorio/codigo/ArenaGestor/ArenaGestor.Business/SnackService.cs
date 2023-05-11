@@ -19,6 +19,7 @@ namespace ArenaGestor.Business
         public Snack CreateSnack(Snack snack)
         {
             snackManagement.InsertSnack(snack);
+            snackManagement.Save();
             return snack;
         }
     }

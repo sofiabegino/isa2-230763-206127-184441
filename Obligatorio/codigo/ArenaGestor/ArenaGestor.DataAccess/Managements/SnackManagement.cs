@@ -22,5 +22,10 @@ namespace ArenaGestor.DataAccess.Managements
         {
             snacks.Add(snack);
         }
+        
+        public void Save()
+        {
+            context.SaveChanges();
+        }
     }
 }

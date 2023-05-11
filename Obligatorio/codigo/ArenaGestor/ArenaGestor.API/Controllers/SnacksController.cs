@@ -1,4 +1,5 @@
-﻿using ArenaGestor.API.Filters;
+﻿using System;
+using ArenaGestor.API.Filters;
 using ArenaGestor.APIContracts;
 using ArenaGestor.APIContracts.Snack;
 using ArenaGestor.BusinessInterface;
@@ -13,12 +14,12 @@ namespace ArenaGestor.API.Controllers
     [Route("[controller]")]
     [ApiController]
     [ExceptionFilter]
-    public class SnackController: ControllerBase
+    public class SnacksController: ControllerBase, ISnacksAppService
     {
         private readonly ISnackService snackService;
         private readonly IMapper mapper;
         
-        public SnackController(ISnackService snackService, IMapper mapper)
+        public SnacksController(ISnackService snackService, IMapper mapper)
         {
             this.snackService = snackService;
             this.mapper = mapper;
@@ -28,10 +29,18 @@ namespace ArenaGestor.API.Controllers
         [HttpPost]
         public IActionResult PostSnack([FromBody] SnackInsertDto insertSnack)
         {
-            var snack = mapper.Map<Snack>(insertSnack);
-            var result = snackService.CreateSnack(snack);
-            var resultDto = mapper.Map<SnackResultDto>(result);
-            return Ok(resultDto);
+            try
+            {
+                var snack = mapper.Map<Snack>(insertSnack);
+                var result = snackService.CreateSnack(snack);
+                var resultDto = mapper.Map<SnackResultDto>(result);
+                return Ok(resultDto);
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
+            
         }
     }
 }

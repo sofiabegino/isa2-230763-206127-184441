@@ -21,6 +21,7 @@ namespace ArenaGestor.API
     {
         public ArenaGestorAutoMapperProfile()
         {
+            CreateMap<Snack, SnackResultDto>();
             CreateMap<SnackInsertDto, Snack>();
             CreateMap<ArtistGetArtistsDto, Artist>();
             CreateMap<ArtistInsertArtistDto, Artist>();

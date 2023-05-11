@@ -10,7 +10,7 @@ namespace ArenaGestor.Domain
         
         public string Description { get; set; }
         
-        public decimal Price { get; set; }
+        public int Price { get; set; }
 
         public virtual IEnumerable<TicketSnack> Tickets { get; set; }
 

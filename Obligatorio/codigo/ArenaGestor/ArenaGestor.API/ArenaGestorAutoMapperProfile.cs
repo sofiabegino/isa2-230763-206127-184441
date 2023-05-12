@@ -14,6 +14,7 @@ using AutoMapper;
 using System.Collections.Generic;
 using System.Linq;
 using ArenaGestor.APIContracts.Snack;
+using ArenaGestor.APIContracts.TicketSnack;
 
 namespace ArenaGestor.API
 {
@@ -21,6 +22,8 @@ namespace ArenaGestor.API
     {
         public ArenaGestorAutoMapperProfile()
         {
+            CreateMap<TicketSnackInsertDto, TicketSnack>();
+            CreateMap<TicketSnack, TicketSnackResultDto>();
             CreateMap<Snack, SnackResultDto>();
             CreateMap<SnackInsertDto, Snack>();
             CreateMap<ArtistGetArtistsDto, Artist>();

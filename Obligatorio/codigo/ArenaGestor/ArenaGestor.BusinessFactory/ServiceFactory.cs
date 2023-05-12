@@ -31,6 +31,7 @@ namespace ArenaGestor.BusinessFactory
             services.AddScoped<IImportExportService, ImportExportService>();
             services.AddSingleton<IReflectionHelpers, ReflectionHelpers>();
             services.AddScoped<ISnackService, SnackService>();
+            services.AddScoped<ITicketSnackService, TicketSnackService>();
         }
     }
 }

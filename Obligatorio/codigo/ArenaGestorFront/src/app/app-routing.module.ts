@@ -26,6 +26,7 @@ import { MyConcertsComponent } from './routes/my-concerts/my-concerts.component'
 import { ScanComponent } from './routes/scan/scan.component';
 import { SellComponent } from './routes/sell/sell.component';
 import { ConcertComponent } from './routes/concert/concert.component';
+import { SnackComponent } from './routes/snack/snack.component';
 import { ConcertInsertComponent } from './routes/concert/concert-insert.component';
 import { ConcertUpdateComponent } from './routes/concert/concert-update.component';
 import { ConcertViewComponent } from './routes/concert/concert-view.component';
@@ -35,10 +36,15 @@ import { ProtagonistBandsComponent } from './routes/protagonist/protagonist.band
 import { ProtagonistSoloistsComponent } from './routes/protagonist/protagonist.soloists.component';
 import { ProtagonistBandComponent } from './routes/protagonist/protagonist.band.component';
 import { ProtagonistSoloistComponent } from './routes/protagonist/protagonist.soloist.component';
+import { SnackInsertComponent } from './routes/snack/snack-insert.component';
+import { SnackUpdateComponent } from './routes/snack/snack-update.component';
 
 const routes: Routes = [
 
   { path: 'home', component: HomeComponent },
+  { path: 'snacks', component: SnackComponent },
+  { path: 'snacks/insertar', component: SnackInsertComponent },
+  { path: 'snacks/editar', component: SnackUpdateComponent },
   { path: 'login', component: LoginComponent },
   { path: 'cambiarcontrasena', component: ChangePasswordComponent, canActivate: [AuthGuard], data: { roles: ['Administrador', 'Espectador', 'Vendedor', 'Acomodador', 'Artista'] } },
   { path: 'misdatos', component: ChangeDataComponent, canActivate: [AuthGuard], data: { roles: ['Administrador', 'Espectador', 'Vendedor', 'Acomodador', 'Artista'] } },
@@ -68,6 +74,7 @@ const routes: Routes = [
   { path: 'administracion/conciertos/editar/:id', component: ConcertUpdateComponent, canActivate: [AuthGuard], data: { roles: ['Administrador'] } },
   { path: 'administracion/conciertos/ver/:id', component: ConcertViewComponent },
   { path: 'administracion/conciertos/verbyartista/:id', component: ConcertArtistViewComponent },
+  { path: 'administracion/snacks', component: SnackComponent, canActivate: [AuthGuard], data: { roles: ['Administrador'] } },
   { path: 'protagonistas/bandas', component: ProtagonistBandsComponent },
   { path: 'protagonistas/solistas', component: ProtagonistSoloistsComponent },
   { path: 'protagonistas/bandas/ver/:id', component: ProtagonistBandComponent },

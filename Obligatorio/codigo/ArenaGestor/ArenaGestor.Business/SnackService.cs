@@ -18,9 +18,26 @@ namespace ArenaGestor.Business
         
         public Snack CreateSnack(Snack snack)
         {
+            ValidateSnack(snack);
+            
             snackManagement.InsertSnack(snack);
             snackManagement.Save();
+            
             return snack;
+        }
+        
+        private void ValidateSnack(Snack snack)
+        {
+            snack.ValidSnack();
+            ValidateSnackDescriptionIsUnique(snack.Description);
+        }
+        
+        private void ValidateSnackDescriptionIsUnique(string description)
+        {
+            if (snackManagement.GetByDescription(description) != null)
+            {
+                throw new ArgumentException("Snack description already exists.");
+            }
         }
     }
 }

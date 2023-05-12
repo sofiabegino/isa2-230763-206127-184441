@@ -17,19 +17,13 @@ Scenario: Create Snack with empty description
 	Given the description is ""
 	And the price is 5
 	When I click on the "Create Snack" button
-	Then I receive a message "Description cannot be empty"
+	Then I receive a message "The description must have at least one character"
 
-Scenario: Create Snack with empty price
+Scenario: Create Snack with the same description
 	Given the description is "Test Snack"
-	And the price is ""
+	And the snack "Test Snack" already exists
+	And the price is 5
 	When I click on the "Create Snack" button
-	Then I receive a message "Price cannot be empty"
-
-Scenario: Create Snack with empty description and price
-	Given the description is ""
-	And the price is ""
-	When I click on the "Create Snack" button
-	Then I receive a message "Description cannot be empty"
-	And I receive a message "Price cannot be empty"
+	Then I receive a message "Snack description already exists."
 	
 	

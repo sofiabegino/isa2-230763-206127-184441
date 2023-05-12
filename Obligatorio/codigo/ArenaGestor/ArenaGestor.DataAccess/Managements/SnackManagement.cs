@@ -22,7 +22,17 @@ namespace ArenaGestor.DataAccess.Managements
         {
             snacks.Add(snack);
         }
-        
+
+        public Snack GetByDescription(string description)
+        {
+            return snacks.AsNoTracking().FirstOrDefault(snack => snack.Description == description);
+        }
+
+        public IEnumerable<Snack> GetAll()
+        {
+            return snacks.AsNoTracking().OrderBy(x => x.Description);
+        }
+
         public void Save()
         {
             context.SaveChanges();

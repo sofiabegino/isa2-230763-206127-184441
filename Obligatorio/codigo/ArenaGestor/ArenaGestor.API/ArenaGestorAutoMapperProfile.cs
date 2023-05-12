@@ -13,6 +13,7 @@ using ArenaGestor.Extensions.DTO;
 using AutoMapper;
 using System.Collections.Generic;
 using System.Linq;
+using ArenaGestor.APIContracts.Snack;
 
 namespace ArenaGestor.API
 {
@@ -20,6 +21,8 @@ namespace ArenaGestor.API
     {
         public ArenaGestorAutoMapperProfile()
         {
+            CreateMap<Snack, SnackResultDto>();
+            CreateMap<SnackInsertDto, Snack>();
             CreateMap<ArtistGetArtistsDto, Artist>();
             CreateMap<ArtistInsertArtistDto, Artist>();
             CreateMap<Artist, ArtistResultArtistDto>()

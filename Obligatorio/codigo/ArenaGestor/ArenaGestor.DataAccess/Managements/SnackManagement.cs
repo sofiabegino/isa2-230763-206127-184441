@@ -23,6 +23,16 @@ namespace ArenaGestor.DataAccess.Managements
             snacks.Add(snack);
         }
 
+        public void DeleteSnack(Snack snack)
+        {
+            snacks.Remove(snack);
+        }
+
+        public Snack GetSnackById(int snackId)
+        {
+            return snacks.AsNoTracking().FirstOrDefault(snack => snack.Id == snackId); 
+        }
+
         public Snack GetByDescription(string description)
         {
             return snacks.AsNoTracking().FirstOrDefault(snack => snack.Description == description);

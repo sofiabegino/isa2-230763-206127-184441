@@ -25,7 +25,12 @@ namespace ArenaGestor.Business
             
             return snack;
         }
-        
+
+        public IEnumerable<Snack> GetSnacks()
+        {
+             return snackManagement.GetAll();
+        }
+
         private void ValidateSnack(Snack snack)
         {
             snack.ValidSnack();

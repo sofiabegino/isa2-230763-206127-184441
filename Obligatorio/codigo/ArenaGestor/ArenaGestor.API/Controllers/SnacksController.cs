@@ -7,6 +7,7 @@ using ArenaGestor.Domain;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
+using ArenaGestor.Business;
 
 
 namespace ArenaGestor.API.Controllers
@@ -41,6 +42,14 @@ namespace ArenaGestor.API.Controllers
                 return BadRequest(e.Message);
             }
             
+        }
+
+        [HttpGet]
+        public IActionResult GetSnacks()
+        {
+            var result = snackService.GetSnacks();
+            var resultDto = mapper.Map<IEnumerable<SnackResultDto>>(result);
+            return Ok(resultDto);
         }
     }
 }

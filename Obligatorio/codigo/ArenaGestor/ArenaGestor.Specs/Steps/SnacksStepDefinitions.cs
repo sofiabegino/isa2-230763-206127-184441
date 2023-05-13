@@ -13,6 +13,8 @@ using Moq;
 using System;
 using ArenaGestor.DataAccess.Managements;
 using AutoMapper;
+using Xunit;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace ArenaGestor.Specs.Steps;
 
@@ -25,7 +27,10 @@ public sealed class SnacksStepDefinitions
     private SnackResultDto _snackResultDto;
     private SnackInsertDto _snackInsertDto;
     private Snack _oldSnack;
-    
+    private Snack _snack1;
+    private Snack _snack2;
+    private List<SnackResultDto> _snacks;
+
     private ISnackManagement _iSnackManagement;
     private ArenaGestorContext _context;
     private Mock<IMapper> _mapperMock;
@@ -121,4 +126,79 @@ public sealed class SnacksStepDefinitions
             Price = 10
         };
     }
+
+    //get all feature
+    [Given(@"the snack with description ""([^""]*)"", price (.*) and id (.*)")]
+    public void GivenTheSnackWithDescriptionPriceAndId(string p0, int p1, int p2)
+    {
+        _snack1 = new Snack()
+            { 
+            Description = p0, 
+            Price = p1, 
+            Id=p2
+            };
+    }
+
+    [Given(@"snack with description ""([^""]*)"", price (.*) and id (.*)")]
+    public void GivenSnackWithDescriptionPriceAndId(string p0, int p1, int p2)
+    {
+        _snack2 = new Snack()
+        {
+            Description = p0,
+            Price = p1,
+            Id = p2
+        };
+    }
+
+
+    [When(@"I click on this button: ""([^""]*)""")]
+    public void WhenIClickOnThisButton(string p0)
+    {
+        IEnumerable<SnackResultDto> lista = new List<SnackResultDto>() {
+            new SnackResultDto() {
+                Id = _snack1.Id,
+                Description = _snack1.Description,
+                Price = _snack1.Price,
+            }, new SnackResultDto() {
+                Id = _snack2.Id,
+                Description = _snack2.Description,
+                Price = _snack2.Price,
+            }};
+
+        var snackManagementMock = new Mock<ISnackManagement>();
+        snackManagementMock.Setup(x => x.GetAll());
+
+        _iSnackManagement = snackManagementMock.Object;
+
+        var mapperMock = new Mock<IMapper>();
+        mapperMock.Setup(x => x.Map<IEnumerable<SnackResultDto>>(It.IsAny<IEnumerable<Snack>>())).Returns(lista);
+
+        _mapperMock = mapperMock;
+
+        var service = new SnackService(_iSnackManagement);
+        var controller = new SnacksController(service, _mapperMock.Object);
+        var result = controller.GetSnacks();
+        if (result is OkObjectResult)
+        {
+            _snacks = (List<SnackResultDto>)((OkObjectResult)result).Value;
+        }
+    }
+
+    [Then(@"I should see a list with two snacks with ids (.*) and (.*)")]
+    public void ThenIShouldSeeAListWithTwoSnacksWithIdsAnd(int p0, int p1)
+    {
+        var lista = new List<SnackResultDto>() {
+            new SnackResultDto() {
+                Id = _snack1.Id,
+                Description = _snack1.Description,
+                Price = _snack1.Price,            
+            }, new SnackResultDto() {
+                Id = _snack2.Id,
+                Description = _snack2.Description,
+                Price = _snack2.Price,
+            }};
+        _snacks.Should().HaveCount(2);
+
+    }
+
 }

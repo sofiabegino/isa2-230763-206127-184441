@@ -7,5 +7,6 @@ namespace ArenaGestor.BusinessInterface
     public interface ISnackService
     {
         Snack CreateSnack(Snack snack);
+        IEnumerable<Snack> GetSnacks();
     }
 }

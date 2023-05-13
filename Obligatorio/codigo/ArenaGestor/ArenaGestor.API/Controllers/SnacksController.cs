@@ -45,6 +45,14 @@ namespace ArenaGestor.API.Controllers
             
         }
 
+        [HttpGet]
+        public IActionResult GetSnacks()
+        {
+            var result = snackService.GetSnacks();
+            var resultDto = mapper.Map<IEnumerable<SnackResultDto>>(result);
+            return Ok(resultDto);
+        }
+
         // post insert snack
         [AuthorizationFilter(RoleCode.Administrador)]
         [HttpDelete("{snackId}")]

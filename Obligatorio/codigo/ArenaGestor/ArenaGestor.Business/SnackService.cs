@@ -27,6 +27,10 @@ namespace ArenaGestor.Business
             return snack;
         }
 
+        public IEnumerable<Snack> GetSnacks()
+        {
+             return snackManagement.GetAll();
+        }
         public Snack GetSnackById(int snackId)
         {
             CommonValidations.ValidId(snackId);

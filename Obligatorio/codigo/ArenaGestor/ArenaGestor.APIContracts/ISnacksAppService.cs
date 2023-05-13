@@ -6,5 +6,7 @@ namespace ArenaGestor.APIContracts
     public interface ISnacksAppService
     {
         IActionResult PostSnack(SnackInsertDto insertSnack);
+
+        IActionResult DeleteSnack(int snackId);
     }
 }

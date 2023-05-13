@@ -8,7 +8,7 @@ using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using ArenaGestor.Business;
-
+using System.Linq.Expressions;
 
 namespace ArenaGestor.API.Controllers
 {
@@ -25,8 +25,9 @@ namespace ArenaGestor.API.Controllers
             this.snackService = snackService;
             this.mapper = mapper;
         }
-        
+
         // post insert snack
+        [AuthorizationFilter(RoleCode.Administrador)]
         [HttpPost]
         public IActionResult PostSnack([FromBody] SnackInsertDto insertSnack)
         {
@@ -50,6 +51,22 @@ namespace ArenaGestor.API.Controllers
             var result = snackService.GetSnacks();
             var resultDto = mapper.Map<IEnumerable<SnackResultDto>>(result);
             return Ok(resultDto);
+        }
+
+        // post insert snack
+        [AuthorizationFilter(RoleCode.Administrador)]
+        [HttpDelete("{snackId}")]
+        public IActionResult DeleteSnack([FromRoute] int snackId)
+        {
+            try
+            {
+                snackService.DeleteSnack(snackId);
+                return Ok("Snack was removed successfully");
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
         }
     }
 }

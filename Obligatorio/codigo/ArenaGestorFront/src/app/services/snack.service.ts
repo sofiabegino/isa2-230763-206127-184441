@@ -5,6 +5,8 @@ import { Observable } from 'rxjs';
 import { ResultSnacksDto } from '../models/Snacks/ResultSnacksDto';
 import { InsertSnacksDto } from '../models/Snacks/InsertSnacksDto';
 import { UpdateSnacksDto } from '../models/Snacks/UpdateSnacksDto';
+import { BuySnacksDto } from '../models/Snacks/BuySnacksDto';
+import { BuySnacksResultDto } from '../models/Snacks/BuySnacksResultDto';
 
 @Injectable({
   providedIn: 'root'
@@ -36,6 +38,10 @@ export class SnackService {
 
   Delete(id: Number) {
     return this.http.delete(this.apiUrl + "/" + id.toString())
+  }
+
+  Shopping(ticket: BuySnacksDto): Observable<BuySnacksResultDto> {
+    return this.http.post<BuySnacksResultDto>("ticket" + this.apiUrl, ticket)
   }
 
 }

@@ -2,6 +2,12 @@ const Home = {
     text: 'Home',
     link: 'home'
 }
+
+const Snacks = {
+    text: 'Snacks',
+    link: 'snacks'
+}
+
 const Tickets = {
     text: 'Tickets',
     submenu: [
@@ -56,6 +62,11 @@ const Admin = {
             link: 'administracion/usuarios',
             roles: ["Administrador"]
         },
+        {
+            text: 'Snacks',
+            link: 'administracion/snacks',
+            roles: ["Administrador"]
+        },
     ]
 };
 
@@ -77,5 +88,6 @@ export const menu = [
     Home,
     Tickets,
     Admin,
+    Snacks,
     Protagonistas
 ]

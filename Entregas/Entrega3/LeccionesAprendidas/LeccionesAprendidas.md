@@ -14,4 +14,4 @@ Durante esta entrega tuvimos la oportunidad de documentar varias lecciones apren
 
 ## Otras lecciones
 
-* Durante esta entrega notamos que el tiempo nos impidio entregar la calidad con la que nos hubiera gustado realizar esta tarea,agregando el periódo del semestre en el que nos encontramos nos impidio la organizacion de la forma más eficiente posible porque era dificil coordinar el equipo que realizaba además diferentes materias con entregas que coincidian en tiempo.
+* Durante esta entrega notamos que el tiempo nos impidio entregar la calidad con la que nos hubiera gustado realizar esta tarea,agregando el periódo del semestre en el que nos encontramos nos impidio la organizacion de la forma más eficiente posible porque era dificil coordinar el equipo que realizaba además diferentes materias con entregas que coincidian en tiempo. Proyectamos para la siguiente entrega arreglar todos los puntos que hayan quedado sin ajustar del feedback recibido.

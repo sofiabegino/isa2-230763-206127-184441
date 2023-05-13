@@ -8,6 +8,10 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <UpToDateCheckInput Remove="features\DeleteSnacks.feature" />
+    </ItemGroup>
+
+    <ItemGroup>
         <Using Include="TechTalk.SpecFlow" />
     </ItemGroup>
 

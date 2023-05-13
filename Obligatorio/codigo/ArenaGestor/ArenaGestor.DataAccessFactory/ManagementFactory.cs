@@ -30,6 +30,8 @@ namespace ArenaGestor.DataAccessFactory
             services.AddScoped<ITicketStatusManagement, TicketStatusManagement>();
             services.AddScoped<ICountrysManagement, CountrysManagement>();
             services.AddScoped<IRolesManagement, RolesManagement>();
+            services.AddScoped<ISnackManagement, SnackManagement>();
+            services.AddScoped<ITicketSnackManagement, TicketSnackManagement>();
         }
 
         public void AddDbContextService(string connectionString)

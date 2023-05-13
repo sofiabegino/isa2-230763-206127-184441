@@ -1,0 +1,72 @@
+﻿using System;
+using ArenaGestor.API.Filters;
+using ArenaGestor.APIContracts;
+using ArenaGestor.APIContracts.Snack;
+using ArenaGestor.BusinessInterface;
+using ArenaGestor.Domain;
+using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using ArenaGestor.Business;
+using System.Linq.Expressions;
+
+namespace ArenaGestor.API.Controllers
+{
+    [Route("[controller]")]
+    [ApiController]
+    [ExceptionFilter]
+    public class SnacksController: ControllerBase, ISnacksAppService
+    {
+        private readonly ISnackService snackService;
+        private readonly IMapper mapper;
+        
+        public SnacksController(ISnackService snackService, IMapper mapper)
+        {
+            this.snackService = snackService;
+            this.mapper = mapper;
+        }
+
+        // post insert snack
+        [AuthorizationFilter(RoleCode.Administrador)]
+        [HttpPost]
+        public IActionResult PostSnack([FromBody] SnackInsertDto insertSnack)
+        {
+            try
+            {
+                var snack = mapper.Map<Snack>(insertSnack);
+                var result = snackService.CreateSnack(snack);
+                var resultDto = mapper.Map<SnackResultDto>(result);
+                return Ok(resultDto);
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
+            
+        }
+
+        [HttpGet]
+        public IActionResult GetSnacks()
+        {
+            var result = snackService.GetSnacks();
+            var resultDto = mapper.Map<IEnumerable<SnackResultDto>>(result);
+            return Ok(resultDto);
+        }
+
+        // post insert snack
+        [AuthorizationFilter(RoleCode.Administrador)]
+        [HttpDelete("{snackId}")]
+        public IActionResult DeleteSnack([FromRoute] int snackId)
+        {
+            try
+            {
+                snackService.DeleteSnack(snackId);
+                return Ok("Snack was removed successfully");
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
+        }
+    }
+}

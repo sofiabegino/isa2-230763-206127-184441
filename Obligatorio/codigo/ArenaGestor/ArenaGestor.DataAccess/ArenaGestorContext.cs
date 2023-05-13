@@ -20,6 +20,8 @@ namespace ArenaGestor.DataAccess
         public DbSet<ArtistBand> ArtistBands { get; set; }
         public DbSet<ConcertProtagonist> ConcertProtagonists { get; set; }
         public DbSet<Country> Countrys { get; set; }
+        public DbSet<Snack> Snacks { get; set; }
+        public DbSet<TicketSnack> TicketSnacks { get; set; }
 
         public ArenaGestorContext(DbContextOptions options) : base(options)
         {
@@ -45,6 +47,18 @@ namespace ArenaGestor.DataAccess
             modelBuilder.Entity<UserRole>().ToTable("RoleUser");
             modelBuilder.Entity<ArtistBand>().ToTable("ArtistBand");
             modelBuilder.Entity<ConcertProtagonist>().ToTable("ConcertProtagonist");
+            modelBuilder.Entity<Snack>().ToTable("Snack");
+            modelBuilder.Entity<TicketSnack>().ToTable("TicketSnack");
+
+            modelBuilder.Entity<TicketSnack>()
+                .HasOne<Ticket>(ts => ts.Ticket)
+                .WithMany(s => s.Snacks)
+                .HasForeignKey(ts => ts.TicketId);
+            
+            modelBuilder.Entity<TicketSnack>()
+                .HasOne<Snack>(ts => ts.Snack)
+                .WithMany(s => s.Tickets)
+                .HasForeignKey(ts => ts.SnackId);
 
             modelBuilder.Entity<Gender>(entity =>
             {

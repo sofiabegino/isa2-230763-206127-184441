@@ -16,5 +16,13 @@ namespace ArenaGestor.Domain
         public Snack Snack { get; set; }
         
         public int SnackId { get; set; }
+        
+        public void ValidTicketSnack()
+        {
+            if (this.Quantity <= 0)
+            {
+                throw new ArgumentException("Quantity must be greater than 0");
+            }
+        }
     }
 }

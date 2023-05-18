@@ -7,14 +7,12 @@
             <div class="card-body">
                 <div class="mb-3">
                     <label class="form-label">Descripción</label>
-                    <input type="text" class="form-control" name="name">
+                    <input type="text" class="form-control" name="description" [(ngModel)]="model.description">
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Precio</label>
-                    <select class="form-select" name="genderId">
-                        <option *ngFor="let gender of genderList" [value]="gender.genderId">{{gender.name}}</option>
-                    </select>
-                </div>
+                    <input type="number" class="form-control" name="price" [(ngModel)]="model.price">
+                </div>                
 
                 <button class="btn btn-primary btn-small" (click)="Confirmar()">Confirmar</button>
                 <a routerLink='/snacks' class="btn btn-danger btn-small ms-1" role="button">Volver</a>

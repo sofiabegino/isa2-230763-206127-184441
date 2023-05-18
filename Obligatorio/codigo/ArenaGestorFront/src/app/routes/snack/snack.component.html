@@ -2,7 +2,7 @@
     <div class="d-flex">
         <h2>Snacks</h2>
         <a class="btn btn-primary btn-sm ms-3" role="button"
-            routerLink="snacks/insertar"><span>Nuevo</span></a>
+            routerLink="/snacks/insertar"><span>Nuevo</span></a>
     </div>
     <!-- <div class="align-self-center">
         <input type="email" class="form-control" placeholder="Filter" name="filter" [(ngModel)]="filter"
@@ -19,13 +19,20 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let snack of snackList">
-            <!-- <td>
+        <tr>
+            <td>
                 <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteBand"
-                    (click)="SetSnackToDelete(band.musicalProtagonistId)">Borrar</button>
-                <a type="button" class="btn btn-warning btn-sm ms-1"
-                    routerLink="/administracion/bandas/editar/{{band.musicalProtagonistId}}" role="button">Editar</a>
-            </td> -->
+                    (click)="SetSnackToDelete(1)">Borrar</button>
+            </td>
+            <td scope="col">1</td>
+            <td scope="col">dsc</td>
+            <td scope="col">32</td>
+        </tr>
+        <tr *ngFor="let snack of snackList">
+            <td>
+                <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteBand"
+                    (click)="SetSnackToDelete(snack.snackId)">Borrar</button>
+            </td>
             <td scope="col">{{snack.snackId}}</td>
             <td scope="col">{{snack.description}}</td>
             <td scope="col">{{snack.price}}</td>

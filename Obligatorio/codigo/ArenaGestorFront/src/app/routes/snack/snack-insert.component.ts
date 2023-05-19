@@ -11,7 +11,7 @@ import { SnackService } from '../../services/snack.service';
 export class SnackInsertComponent implements OnInit {
 
   mode: String = "Insertar";
-  model: InsertSnacksDto = new InsertSnacksDto()
+  model: InsertSnacksDto = new InsertSnacksDto();
 
   dropdownSettings: IDropdownSettings = {};
 
@@ -31,11 +31,11 @@ export class SnackInsertComponent implements OnInit {
 
   Confirmar() {
     this.service.Insert(this.model).subscribe(res => {
-      this.toastr.success("Snack agregada correctamente", "Éxito")
-      this.router.navigate(["/snacks"])
+      this.toastr.success("Snack agregada correctamente", "Éxito");
+      this.router.navigate(["/snacks"]);
     },
       err => {
-        this.toastr.error(err.error, "Error")
-      })
+        this.toastr.error(err.error, "Error");
+      });
   }
 }

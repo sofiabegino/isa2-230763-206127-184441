@@ -42,9 +42,7 @@ import { SnackUpdateComponent } from './routes/snack/snack-update.component';
 const routes: Routes = [
 
   { path: 'home', component: HomeComponent },
-  { path: 'snacks', component: SnackComponent },
-  { path: 'snacks/insertar', component: SnackInsertComponent },
-  { path: 'snacks/editar', component: SnackUpdateComponent },
+
   { path: 'login', component: LoginComponent },
   { path: 'cambiarcontrasena', component: ChangePasswordComponent, canActivate: [AuthGuard], data: { roles: ['Administrador', 'Espectador', 'Vendedor', 'Acomodador', 'Artista'] } },
   { path: 'misdatos', component: ChangeDataComponent, canActivate: [AuthGuard], data: { roles: ['Administrador', 'Espectador', 'Vendedor', 'Acomodador', 'Artista'] } },
@@ -53,6 +51,9 @@ const routes: Routes = [
   { path: 'tickets/scan', component: ScanComponent, canActivate: [AuthGuard], data: { roles: ['Acomodador'] } },
   { path: 'tickets/vender', component: SellComponent, canActivate: [AuthGuard], data: { roles: ['Vendedor'] } },
   { path: 'tickets/comprar/:id', component: BuyComponent, canActivate: [AuthGuard], data: { roles: ['Espectador'] } },
+  { path: 'snacks', component: SnackComponent, canActivate: [AuthGuard], data: { roles: ['Administrador'] } },
+  { path: 'snacks/insertar', component: SnackInsertComponent, canActivate: [AuthGuard], data: { roles: ['Administrador'] } },
+  { path: 'snacks/editar', component: SnackUpdateComponent, canActivate: [AuthGuard], data: { roles: ['Administrador'] } },
   { path: 'administracion/generos', component: GendersComponent, canActivate: [AuthGuard], data: { roles: ['Administrador'] } },
   { path: 'administracion/generos/insertar', component: GenderInsertComponent, canActivate: [AuthGuard], data: { roles: ['Administrador'] } },
   { path: 'administracion/generos/editar/:id', component: GenderUpdateComponent, canActivate: [AuthGuard], data: { roles: ['Administrador'] } },

@@ -22,16 +22,21 @@
 
 <div class="d-flex flex-row justify-content-between">
     <div class="d-flex">
-        <h2>Vender snacks</h2>
+        <h2>Comprar snacks</h2>
     </div>
+</div>
+
+<div class="mb-3">
+  <label class="form-label">Snacks</label>
+  <select class="form-select" name="snackId" [(ngModel)]="selectedSnackId">
+      <option *ngFor="let snack of snackList" [value]="snack.id">{{snack.description}}</option>
+  </select>
 </div>
 
 <div class="row">
     <div class="col-sm-6">
         <div class="card">
-            <div class="card-header">
-                {{selectedSnackDescription}}
-            </div>
+
             <div class="card-body">
                 <div class="mb-3">
                     <label class="form-label">Cantidad de snacks</label>

@@ -38,6 +38,7 @@ public sealed class SnacksStepDefinitions
     private Mock<IMapper> _mapperMock;
     
     private string _resultMessage;
+    private int _resultStatusCode;
 
     private readonly ScenarioContext _scenarioContext;
 
@@ -238,8 +239,13 @@ public sealed class SnacksStepDefinitions
         if (result is OkObjectResult)
         {
             _resultMessage = (string)((OkObjectResult)result).Value;
+            
         }
-        else
+        else if (result is OkResult)
+        {
+            _resultStatusCode = ((OkResult)result).StatusCode;
+        }
+        else if (result is BadRequestObjectResult)
         {
             _resultMessage = ((BadRequestObjectResult)result).Value.ToString();
         }
@@ -270,4 +276,9 @@ public sealed class SnacksStepDefinitions
         };
     }
 
+    [Then(@"I get a (.*) status code")]
+    public void ThenIGetAStatusCode(int p0)
+    {
+        _resultStatusCode.Should().Be(p0);
+    }
 }

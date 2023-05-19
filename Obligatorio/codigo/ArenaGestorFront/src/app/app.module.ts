@@ -50,6 +50,9 @@ import { ProtagonistBandsComponent } from './routes/protagonist/protagonist.band
 import { ProtagonistSoloistsComponent } from './routes/protagonist/protagonist.soloists.component';
 import { ProtagonistBandComponent } from './routes/protagonist/protagonist.band.component';
 import { ProtagonistSoloistComponent } from './routes/protagonist/protagonist.soloist.component';
+import { SnackInsertComponent } from './routes/snack/snack-insert.component';
+import { SnackUpdateComponent } from './routes/snack/snack-update.component';
+import { SnackComponent } from './routes/snack/snack.component';
 
 @NgModule({
   declarations: [
@@ -65,6 +68,9 @@ import { ProtagonistSoloistComponent } from './routes/protagonist/protagonist.so
     ArtistInsertComponent,
     ArtistUpdateComponent,
     SoloistComponent,
+    SnackComponent,
+    SnackInsertComponent,
+    SnackUpdateComponent,
     SoloistInsertComponent,
     SoloistUpdateComponent,
     BandComponent,
@@ -97,11 +103,11 @@ import { ProtagonistSoloistComponent } from './routes/protagonist/protagonist.so
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
     BrowserAnimationsModule,
     BsDatepickerModule.forRoot(),
-    ReactiveFormsModule,
     NgMultiSelectDropDownModule.forRoot(),
   ],
   providers: [

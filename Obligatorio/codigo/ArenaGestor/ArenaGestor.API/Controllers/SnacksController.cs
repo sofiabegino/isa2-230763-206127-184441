@@ -61,7 +61,7 @@ namespace ArenaGestor.API.Controllers
             try
             {
                 snackService.DeleteSnack(snackId);
-                return Ok("Snack was removed successfully");
+                return Ok();
             }
             catch (Exception e)
             {

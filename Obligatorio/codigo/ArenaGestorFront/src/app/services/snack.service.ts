@@ -14,8 +14,10 @@ import { BuySnacksResultDto } from '../models/Snacks/BuySnacksResultDto';
 export class SnackService {
 
   private apiUrl: string
+  private shopping: string
 
   constructor(private http: HttpClient) {
+    this.shopping = environment.apiURL + "ticketSnacks"
     this.apiUrl = environment.apiURL + "snacks"
   }
 
@@ -41,7 +43,7 @@ export class SnackService {
   }
 
   Shopping(ticket: BuySnacksDto): Observable<BuySnacksResultDto> {
-    return this.http.post<BuySnacksResultDto>("ticket" + this.apiUrl, ticket)
+    return this.http.post<BuySnacksResultDto>(this.shopping, ticket)
   }
 
 }

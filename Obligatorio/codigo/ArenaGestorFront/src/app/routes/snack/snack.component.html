@@ -4,10 +4,6 @@
         <a class="btn btn-primary btn-sm ms-3" role="button"
             routerLink="/snacks/insertar"><span>Nuevo</span></a>
     </div>
-    <!-- <div class="align-self-center">
-        <input type="email" class="form-control" placeholder="Filter" name="filter" [(ngModel)]="filter"
-            #modelFilter="ngModel" (keyup)="GetData()">
-    </div> -->
 </div>
 <table class="table table-striped">
     <thead>
@@ -19,21 +15,12 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>
-                <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteBand"
-                    (click)="SetSnackToDelete(1)">Borrar</button>
-            </td>
-            <td scope="col">1</td>
-            <td scope="col">dsc</td>
-            <td scope="col">32</td>
-        </tr>
         <tr *ngFor="let snack of snackList">
             <td>
-                <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteBand"
-                    (click)="SetSnackToDelete(snack.snackId)">Borrar</button>
+                <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteSnack"
+                    (click)="SetSnackToDelete(snack.id)">Borrar</button>
             </td>
-            <td scope="col">{{snack.snackId}}</td>
+            <td scope="col">{{snack.id}}</td>
             <td scope="col">{{snack.description}}</td>
             <td scope="col">{{snack.price}}</td>
         </tr>

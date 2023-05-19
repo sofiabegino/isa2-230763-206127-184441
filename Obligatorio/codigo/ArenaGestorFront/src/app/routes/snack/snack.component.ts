@@ -31,10 +31,11 @@ export class SnackComponent implements OnInit {
 
   Delete() {
     this.service.Delete(this.snackToDelete).subscribe(res => {
-      this.toastr.success("Snack borrada correctamente", "Éxito")
+      this.toastr.success("Se ha eliminado el snack", "Éxito")
       this.GetData();
     },
       err => {
+        console.log(err)
         this.toastr.error(err.error, "Error")
       })
   }

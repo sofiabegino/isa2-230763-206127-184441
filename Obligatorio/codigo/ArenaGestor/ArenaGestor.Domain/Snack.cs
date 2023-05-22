@@ -34,7 +34,7 @@ namespace ArenaGestor.Domain
             {
                 throw new ArgumentException("Description must be less than 50 characters");
             }
-            if (this.Price < 0)
+            if (this.Price <= 0)
             {
                 throw new ArgumentException("Price must be greater than 0");
             }

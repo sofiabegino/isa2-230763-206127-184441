@@ -6,6 +6,8 @@ labels: task
 assignees: ''
 
 ---
+**Fecha inicio:**
+**Fecha fin:**
 
 ### User story relacionada
 [Nombre de user story relacionada]

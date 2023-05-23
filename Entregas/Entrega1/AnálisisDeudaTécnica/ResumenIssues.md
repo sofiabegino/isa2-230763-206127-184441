@@ -57,3 +57,9 @@ Debido a que se encontró un gran volumen de bugs que escapan el alcance del pro
 * Existen archivos vacíos
 
 El analisis más profundo de las issues se encuentra en el tablero del proyecto, allí se siguio el formato de las issues establecido en los templates de la carpeta "IssiesTemplates". Donde se puede ver la descripción, la solucion (lo que se espera) y la deuda (lo que ocurre actualmente) en cada caso.
+
+## Método de análisis
+
+Para el análisis estático finalmente no se utilizaron herramientas en particular, aunque se consideró utilizar la herramienta ESLint. El análisis manualemnte y ejecutando los test mientras se analizaba la cobertura de pruebas unitarias.
+
+Para el análisis dinámico, el mismo fue realizado manualmente y en equipo mediante videollamada, compartiendo pantalla y observando la mayor cantidad de casuisticas posibles para encontrar posibles bugs.

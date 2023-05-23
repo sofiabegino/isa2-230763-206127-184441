@@ -7,3 +7,4 @@ Estimado: [Estimación en horas-persona]
 Real: [Estimación en horas-persona]
 
 Además, agregamos dos campos "Fecha inicio" y "Fecha fin" a nuestros templates, para poder llevar un mejor registro y facilitar el cálculo de métricas.
+

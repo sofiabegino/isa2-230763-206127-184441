@@ -6,6 +6,8 @@ labels: task de gestión
 assignees: ''
 
 ---
+**Fecha inicio:**
+**Fecha fin:**
 
 ### Descripción
 [Descripción detallada de la tarea y objetivo]

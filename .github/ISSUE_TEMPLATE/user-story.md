@@ -6,6 +6,8 @@ labels: user story
 assignees: ''
 
 ---
+**Fecha inicio:**
+**Fecha fin:**
 
 ### Narrativa
 Como [tipo de usuario]

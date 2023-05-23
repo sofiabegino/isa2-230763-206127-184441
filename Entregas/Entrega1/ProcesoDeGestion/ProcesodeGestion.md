@@ -6,9 +6,7 @@ Es importante mencionar que no se va a aplicar Kanban al 100%, ya que se van a h
 
 ## Tablero
 
-Inicialmente el tablero va a tener 7 columnas: Backlog, In Progress, Requirements Definition, Dev, Testing, Deployment y Done. 
-
-![Tablero](tablero.png)
+Inicialmente el tablero debia a tener 3 columnas: Backlog, In Progress y Done. 
 
 En el proceso de ingenieria se detalla cada una de las columnas.
 

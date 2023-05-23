@@ -1,0 +1,661 @@
+{
+  "id": "22dd5e7b-ce2c-4b8b-b44c-45e57b9eaafe",
+  "version": "2.0",
+  "name": "Test149",
+  "url": "http://localhost:4200",
+  "tests": [{
+    "id": "c772bdc9-533c-470e-aee4-fe7d31a6345e",
+    "name": "Escenario 1: Intento de cambio de contraseña con seguridad insuficiente",
+    "commands": [{
+      "id": "7dd5c4e5-4a18-4b47-8cc0-644583b5c912",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "83fd4703-933c-4763-9145-76579b25cd04",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1157x718",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b476c486-95e7-4321-835c-01f3c4be5be6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-outline-primary",
+      "targets": [
+        ["css=.btn-outline-primary", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Ingresar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "97c0f387-5746-4ef0-8d87-6fe77f74c9d5",
+      "comment": "",
+      "command": "type",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.ng-dirty:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "espectador@example.com"
+    }, {
+      "id": "57390215-aaf5-45d3-b03a-137eecf0de83",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.mb-3:nth-child(4) > .form-control", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "test"
+    }, {
+      "id": "8fd40536-2a84-404d-9821-145a2947ad9a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.w-100",
+      "targets": [
+        ["css=.w-100", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e6e92030-d628-4027-a658-be50a9279a53",
+      "comment": "",
+      "command": "click",
+      "target": "id=dropdownUser1",
+      "targets": [
+        ["id=dropdownUser1", "id"],
+        ["linkText=Espectador Test", "linkText"],
+        ["css=#dropdownUser1", "css:finder"],
+        ["xpath=//a[contains(text(),'Espectador Test')]", "xpath:link"],
+        ["xpath=//a[@id='dropdownUser1']", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Espectador Test ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "124a88f4-8d37-4cd8-96b1-7f51f2861b8d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Cambiar contraseña",
+      "targets": [
+        ["linkText=Cambiar contraseña", "linkText"],
+        ["css=li:nth-child(4) > .dropdown-item", "css:finder"],
+        ["xpath=//a[contains(text(),'Cambiar contraseña')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/cambiarcontrasena')]", "xpath:href"],
+        ["xpath=//li[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Cambiar contraseña')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "00205cf7-fd0d-404d-809b-3c76013b923c",
+      "comment": "",
+      "command": "click",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.mb-3:nth-child(1) > .form-control", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d32e0029-42a2-4381-8489-391b3bd0c03d",
+      "comment": "",
+      "command": "type",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.ng-dirty", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "test"
+    }, {
+      "id": "83716c3f-d04f-4a10-94dd-d9b268e9ae51",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mb-3:nth-child(2) > .form-control",
+      "targets": [
+        ["css=.mb-3:nth-child(2) > .form-control", "css:finder"],
+        ["xpath=(//input[@name='name'])[2]", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2c41a6f4-a5c5-429a-b8f2-58735c7909b6",
+      "comment": "",
+      "command": "type",
+      "target": "css=.mb-3:nth-child(2) > .form-control",
+      "targets": [
+        ["css=.mb-3:nth-child(2) > .form-control", "css:finder"],
+        ["xpath=(//input[@name='name'])[2]", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "21"
+    }, {
+      "id": "569c36d9-0468-42e4-b2b9-c494d535f557",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mb-3:nth-child(3) > .form-control",
+      "targets": [
+        ["css=.mb-3:nth-child(3) > .form-control", "css:finder"],
+        ["xpath=(//input[@name='name'])[3]", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a31dbf5c-d957-48ec-99a1-38bf8612c7ac",
+      "comment": "",
+      "command": "type",
+      "target": "css=.mb-3:nth-child(3) > .form-control",
+      "targets": [
+        ["css=.mb-3:nth-child(3) > .form-control", "css:finder"],
+        ["xpath=(//input[@name='name'])[3]", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "21"
+    }, {
+      "id": "5c2fdeb4-7a53-44ab-a374-9a82ee460cf8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Confirmar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1805fe09-c40e-454d-ab58-07fc43ca10e3",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.toast-message",
+      "targets": [
+        ["css=.toast-message", "css:finder"],
+        ["xpath=//div[@id='toast-container']/div/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "770efbbb-78b7-488a-b2ce-159af9014fc8",
+      "comment": "",
+      "command": "click",
+      "target": "id=dropdownUser1",
+      "targets": [
+        ["id=dropdownUser1", "id"],
+        ["linkText=Espectador Test", "linkText"],
+        ["css=#dropdownUser1", "css:finder"],
+        ["xpath=//a[contains(text(),'Espectador Test')]", "xpath:link"],
+        ["xpath=//a[@id='dropdownUser1']", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Espectador Test ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3506262e-2981-4333-b856-cc76def956ee",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Salir",
+      "targets": [
+        ["linkText=Salir", "linkText"],
+        ["css=li:nth-child(6) > .dropdown-item", "css:finder"],
+        ["xpath=//a[contains(text(),'Salir')]", "xpath:link"],
+        ["xpath=//li[6]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Salir')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "574dc755-132f-4033-8606-82bc6ed35273",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "7a78e42c-d83c-4a1c-bb0b-805e7ddf3d1b",
+    "name": "Escenario 2: Intento de cambio de contraseña con campos sucios",
+    "commands": [{
+      "id": "81115bec-377d-4716-bd1f-86fbc33d7bca",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cef9b855-ac4b-44f6-a8ee-4620dc0f5a7b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1157x718",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "697789f5-aaa3-4106-8b07-0cef22585cd7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-outline-primary",
+      "targets": [
+        ["css=.btn-outline-primary", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Ingresar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "78375ca2-5efb-484c-b304-78ba37923f8f",
+      "comment": "",
+      "command": "type",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.ng-dirty:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "espectador@example.com"
+    }, {
+      "id": "6b9fed1d-2cb3-4310-bd48-0dd124ac6947",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.mb-3:nth-child(4) > .form-control", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "test"
+    }, {
+      "id": "ba0668b7-cd39-4615-b8c8-da68326ae206",
+      "comment": "",
+      "command": "click",
+      "target": "css=.w-100",
+      "targets": [
+        ["css=.w-100", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "68a3705e-175f-4091-b4de-b59f626d56e1",
+      "comment": "",
+      "command": "click",
+      "target": "id=dropdownUser1",
+      "targets": [
+        ["id=dropdownUser1", "id"],
+        ["linkText=Espectador Test", "linkText"],
+        ["css=#dropdownUser1", "css:finder"],
+        ["xpath=//a[contains(text(),'Espectador Test')]", "xpath:link"],
+        ["xpath=//a[@id='dropdownUser1']", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Espectador Test ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "64663e49-ad6e-4fd5-ba7f-0a1516a65dfc",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Cambiar contraseña",
+      "targets": [
+        ["linkText=Cambiar contraseña", "linkText"],
+        ["css=li:nth-child(4) > .dropdown-item", "css:finder"],
+        ["xpath=//a[contains(text(),'Cambiar contraseña')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/cambiarcontrasena')]", "xpath:href"],
+        ["xpath=//li[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Cambiar contraseña')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "707c3474-a12a-4289-a40a-3b2ea9ad60d2",
+      "comment": "",
+      "command": "click",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.mb-3:nth-child(1) > .form-control", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a173365f-7229-4ce8-ae6e-815a37050b1a",
+      "comment": "",
+      "command": "type",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.ng-dirty", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "test"
+    }, {
+      "id": "54dd2bcb-41ca-4939-ba53-eb40eaf256ab",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mb-3:nth-child(2) > .form-control",
+      "targets": [
+        ["css=.mb-3:nth-child(2) > .form-control", "css:finder"],
+        ["xpath=(//input[@name='name'])[2]", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a1542666-a0d3-4979-8f07-ee93891b2398",
+      "comment": "",
+      "command": "type",
+      "target": "css=.mb-3:nth-child(2) > .form-control",
+      "targets": [
+        ["css=.mb-3:nth-child(2) > .form-control", "css:finder"],
+        ["xpath=(//input[@name='name'])[2]", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "2121212121"
+    }, {
+      "id": "6abed4dc-d59a-4c31-abc9-7dbb0b09f5e7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Confirmar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ff81e8f2-87d9-42df-b2e8-4bf1d7f237fe",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.toast-message",
+      "targets": [
+        ["css=.toast-message", "css:finder"],
+        ["xpath=//div[@id='toast-container']/div/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "74cfb4be-9b6d-4a9b-a32a-3e7954f82a6e",
+      "comment": "",
+      "command": "click",
+      "target": "id=dropdownUser1",
+      "targets": [
+        ["id=dropdownUser1", "id"],
+        ["linkText=Espectador Test", "linkText"],
+        ["css=#dropdownUser1", "css:finder"],
+        ["xpath=//a[contains(text(),'Espectador Test')]", "xpath:link"],
+        ["xpath=//a[@id='dropdownUser1']", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Espectador Test ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cd99f02c-4e0e-48f7-a639-3ad6840f0b28",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Salir",
+      "targets": [
+        ["linkText=Salir", "linkText"],
+        ["css=li:nth-child(6) > .dropdown-item", "css:finder"],
+        ["xpath=//a[contains(text(),'Salir')]", "xpath:link"],
+        ["xpath=//li[6]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Salir')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "57ec9c05-890b-452d-b455-2b22989b7d5f",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "ab5539df-32a1-4ea8-a9d0-ee3f43a88710",
+    "name": "Escenario 3: Intento de cambio de contraseña exitoso",
+    "commands": [{
+      "id": "4183ba47-226e-4d5e-97c0-537b69a9ff56",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6a140971-8539-4b43-aae7-ae6f1230a75a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1157x718",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f1d397e6-a945-4ae7-a1e4-e0f6b105b6c8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-outline-primary",
+      "targets": [
+        ["css=.btn-outline-primary", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Ingresar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3bafce8c-acf5-46ec-bc13-9477744002af",
+      "comment": "",
+      "command": "type",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.ng-dirty:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "espectador@example.com"
+    }, {
+      "id": "eaeaa0f5-3de7-4d88-b52b-e0eacb94bb53",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.mb-3:nth-child(4) > .form-control", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "test"
+    }, {
+      "id": "58aaf33d-ee04-4f6b-bdd7-52e5f7919dd0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.w-100",
+      "targets": [
+        ["css=.w-100", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "993073a4-50a8-4083-aa74-3d453be271a0",
+      "comment": "",
+      "command": "click",
+      "target": "id=dropdownUser1",
+      "targets": [
+        ["id=dropdownUser1", "id"],
+        ["linkText=Espectador Test", "linkText"],
+        ["css=#dropdownUser1", "css:finder"],
+        ["xpath=//a[contains(text(),'Espectador Test')]", "xpath:link"],
+        ["xpath=//a[@id='dropdownUser1']", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Espectador Test ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "484e8419-cb01-4d47-81b4-c7123de34ce5",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Cambiar contraseña",
+      "targets": [
+        ["linkText=Cambiar contraseña", "linkText"],
+        ["css=li:nth-child(4) > .dropdown-item", "css:finder"],
+        ["xpath=//a[contains(text(),'Cambiar contraseña')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/cambiarcontrasena')]", "xpath:href"],
+        ["xpath=//li[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Cambiar contraseña')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9fb600d7-def5-413d-86be-018e1d4eedd9",
+      "comment": "",
+      "command": "click",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.mb-3:nth-child(1) > .form-control", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3721f848-1d4a-4174-8715-e1fe37021655",
+      "comment": "",
+      "command": "type",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.ng-dirty", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "test"
+    }, {
+      "id": "970d4052-6e7c-46dd-8d75-54b3785c5ffc",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mb-3:nth-child(2) > .form-control",
+      "targets": [
+        ["css=.mb-3:nth-child(2) > .form-control", "css:finder"],
+        ["xpath=(//input[@name='name'])[2]", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cda89519-8b1f-4268-8121-ba16ef1f1311",
+      "comment": "",
+      "command": "type",
+      "target": "css=.mb-3:nth-child(2) > .form-control",
+      "targets": [
+        ["css=.mb-3:nth-child(2) > .form-control", "css:finder"],
+        ["xpath=(//input[@name='name'])[2]", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "21@pasSword3"
+    }, {
+      "id": "24d4fba0-3946-4509-8366-0ec68fa8c46e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mb-3:nth-child(3) > .form-control",
+      "targets": [
+        ["css=.mb-3:nth-child(3) > .form-control", "css:finder"],
+        ["xpath=(//input[@name='name'])[3]", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "474c1e37-5dae-4134-9f14-8405497902e9",
+      "comment": "",
+      "command": "type",
+      "target": "css=.mb-3:nth-child(3) > .form-control",
+      "targets": [
+        ["css=.mb-3:nth-child(3) > .form-control", "css:finder"],
+        ["xpath=(//input[@name='name'])[3]", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "21@pasSword3"
+    }, {
+      "id": "1aee6602-f141-4a12-8d42-a3c16282d7c2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Confirmar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4f7c27d3-7e42-40f4-a563-6aaf47b929b4",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.toast-message",
+      "targets": [
+        ["css=.toast-message", "css:finder"],
+        ["xpath=//div[@id='toast-container']/div/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "87c352ec-a41a-44b6-8dab-72affe52965f",
+      "comment": "",
+      "command": "click",
+      "target": "id=dropdownUser1",
+      "targets": [
+        ["id=dropdownUser1", "id"],
+        ["linkText=Espectador Test", "linkText"],
+        ["css=#dropdownUser1", "css:finder"],
+        ["xpath=//a[contains(text(),'Espectador Test')]", "xpath:link"],
+        ["xpath=//a[@id='dropdownUser1']", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Espectador Test ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "089f3391-1288-48c9-9be4-653f5b7c5dd2",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Salir",
+      "targets": [
+        ["linkText=Salir", "linkText"],
+        ["css=li:nth-child(6) > .dropdown-item", "css:finder"],
+        ["xpath=//a[contains(text(),'Salir')]", "xpath:link"],
+        ["xpath=//li[6]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Salir')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6dcaf9ec-9bc6-4ac8-b17a-26223f4d6248",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "c17ed455-f1a1-4fe5-8626-2a79de2164f6",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["http://localhost:4200/"],
+  "plugins": []
+}

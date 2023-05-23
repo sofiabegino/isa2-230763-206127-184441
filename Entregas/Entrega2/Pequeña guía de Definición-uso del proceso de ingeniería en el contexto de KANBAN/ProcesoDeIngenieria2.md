@@ -3,25 +3,36 @@
 Realizamos algunas adaptaciones respecto al proceso de ingeniería presentado en la primera entrega. Debido a que en esta entrega se deben trabajar dos bugs.
 Teniendo en cuenta que los roles que se manejan en este proyecto son: tester, developer, integrante que actúa como PO e integrante que actúa como SM, el nuevo proceso de ingeniería es:
 
+# Proceso de Ingeniería
+
+Nuestro proceso de ingeniería para esta entrega se detalla en la siguiente tabla:
+
+| Que | Quien | Como | Output |
+| ------------- | ------------- | ------------- | ------------- |
+| Requirement Definition (CCC)  | Todo el equipo | User Stories | To do (product backlog) |
+| Application Implementation | Desarrolladores  | POO + C# | Código agregado |
+| Testing | Testers | Test unitarios C# | Código y bugs detectados |
+| Refactoring | Desarrolladores | POO + C# | Código mejorado |
+
+# Tablero
+
+Para esta entrega el tablero consta de las columnas segun indica el proceso de ingenieria (Requirement Definition (CCC))
+
 ![Proceso Ingeniería](procesoIngenieria.png)
 
 1) Requirements Definition
 * Cómo: Utilizando template de User story
-* Cuándo: Al iniciar el proceso de reparación de bugs.
+* Cuándo: Al iniciar el proceso de preparación de bugs.
 * Quién: PO
-2) Test Cases Implementation
-* Cómo: Se implementan tests.
-* Cuándo: Luego de generar las User story correspondientes.
-* Quién: Developers
-3) Application Implementation
+2) Application Implementation
 * Cómo: Se trabaja en el código de la aplicación.
 * Cuándo: Luego de la implementacion de los casos de prueba correspondientes.
 * Quién: Developers
-4) Testing
-* Cómo: Ejecucion de casos de prueba implementadoa en el paso 2.
+3) Testing
+* Cómo: Ejecucion de test.
 * Cuándo: Luego de finalizada la implementación de los ajustes.
 * Quién: Testers
-5) Refactor
+4) Refactor
 * Cómo: Mejorar el código.
 * Cuándo: Luego de realizado el testing, si existe algun ajuste o mejora a realizar.
 * Quién: Developers
@@ -31,11 +42,10 @@ Teniendo en cuenta que los roles que se manejan en este proyecto son: tester, de
 Para esta instancia se agregaron nuevas columnas para con la estratégia BDD, estas son las siguientes:
 
 * Requirements Definition - En esta intancia se utilizara para refinar los requerimientos de los bugs a solucionar y pasarlos a User Story
-* Test Cases Implementation - En esta intancia se utilizara para implementar los test que luego serviran para implementar la solucion
 * Application Implementation - En esta instancia se desarrolla el codigo para solucionar el bug
 * Refactor - Luego de ejecutar los tests y probar la solucion de los bugs se decidirá si es necesario realizar algun ajuste, en dicho caso la issue se moverá hasta esta columna.
 
-Por otro lado, agregamos una nueva columna "TO DO" que se ocupara para ubicar las issues que se van a estar trabajando del "BACKLOG", ya que para esta entrega solo se van a trabajar 2 bugs y nuestro BACKLOG cuenta con muchos más.
+Por otro lado, como poceso de Gestión, agregamos una nueva columna "TO DO" que se ocupara para ubicar las issues que se van a estar trabajando del "BACKLOG", ya que para esta entrega solo se van a trabajar 2 bugs y nuestro BACKLOG cuenta con muchos más.
 
 Aclaramos además que la columna "Testing" de la entrega 1 se utilizaba para la instancia de identificar bugs/problemas de codigo, pero en esta oportunidad se utiliza como la columna "Testing" de kanban.
 
@@ -56,3 +66,4 @@ Nacen en la columna BACKLOG, luego en la entrega que corresponde se mueven a la 
 Tener en cuenta de que no todas las issues son bugs, es por esto que pueden existir ligeras variantes.
 
 ![Tablero 3](progreso-tablero3.png)
+// Este tablero puede haber quedado desactualizado luego de los ajustes al proceso de ingenieria realiados a partir del feedback recibirdo en la entrega3.

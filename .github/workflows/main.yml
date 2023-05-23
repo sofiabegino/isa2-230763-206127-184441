@@ -91,3 +91,7 @@ jobs:
     - name: Test Data Access
       working-directory: ./Obligatorio/codigo/ArenaGestor/Test/ArenaGestor.DataAccessTest/
       run: dotnet test --no-build --verbosity normal
+      
+    - name: Test BDD tests
+      working-directory: ./Obligatorio/codigo/ArenaGestor/ArenaGestor.Specs/
+      run: dotnet test --no-build --verbosity normal
